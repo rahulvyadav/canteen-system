@@ -1,0 +1,153 @@
+41-1:20
+file name:food_page_body.dart
+line10
+
+
+class _foodpagebodystate extaends state<foodpagebody>{
+ pageController Pagecontroller()=pagecontroller(viewportFraction:0.85);             /?????????????????????? ADD karna ha
+ @override
+ widget build(BuildContext context) {
+   return Container(
+      color: colors.redAccent,
+      height:320,
+      child: PageView.builder(
+          controller:pageController,       ???????? Add KARNA HA
+          itemcount:5,
+          itemBuilder:(context,position){
+        return _buildPageItem(position);
+      }), //pageview.builder
+     );   //container
+    }
+widget _buildPageItem(int index){
+  return Stack(
+     Children:[
+        Container(
+          height:220,
+          margin:EdgeInserts.only(left:10,right:10),
+          decoration:BoxDecoration(
+             borderRadius: BorderRadius.Circular(30),
+             color: index.isEven?Color(0xFF69c5df):Color(0xFF9294cc)
+             image:DecorationImage(
+                 fit: Boxfit.cover,
+                 image:AssetImage(
+            "assets/image/food0.png"
+       )  //AssertImage
+     ),  //BoxDecoration
+    ); //Container
+
+
+=====>>>>> main_food_page.dart
+
+line 20: Container(...),
+         FoodPageBody(),
+
+
+
+
+
+
+
+====>>>>> Back 
+
+27 --- Container(..),
+41 ---Container(..)
+    // Right click on container ==== Wrap with Widget
+
+     41 ====== Align(
+                  alignment:Alignment.bottomcenter,
+                  child:container(
+                     height:120,
+     50              m.....(left:30,right:30,bottom:30),
+     51              decoration:BoxDecoration(
+     52                     borderRadius.circular(30),
+     53                     color:color.white,
+
+      52              ),
+      53              child:Container(
+                         padding:EdgeInsets.only(top:15, left:15, right:15),
+                         child:column(
+                            crossAxisAlignment:CrossAxisAlignment.start,
+                            children:[
+                               BigText(text:"Chinese Side"),
+                               SizedBox(height:10,),
+                               Row(
+                                 children:[
+                                    Wrap(
+                                      children:List.generate(5,(index) { return Icon(Icons.star,color:AppColors.mainColor,Size:15,)}),
+                                     ),
+                                     SizedBox(Width:10,),
+                                     SmallText(text:"4.5"),
+                                     SizedBox(Width:10,),
+                                     SmallText(text:"1287"),
+                                     SizedBox(Width:10,),
+                                     SmallText(text:"comments")
+                                   ],
+
+
+
+63                          Row(..),
+76                          sizedBox(height:20,),
+                            Row(
+                              children:[
+                                   children : [
+                                      IconAndTextWidget ( icon : Icons.circle_sharp ,
+                                            text : " Normal " ,
+                                            color :
+                                            iconColor : iconColor ) // IconAndTextWidget
+                                      ] ,
+                             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+New File :)  icon_and_text_widget.dart
+
+
+
+import 'package:flutter/cupertino.dart';
+ 
+class IconAndTextWidget extends StatelessWidget {
+  final IconData icon ;
+  final String text ;
+  final Color color ;
+  final Color iconColor ;
+  const IconAnd TextWidget ( { Key ? key ,
+    required this.icon ,
+    required this.text ,
+    required this.color= ,
+    required this.iconColor } ) : super ( key : key ) ;
+
+   @override
+  Widget build ( BuildContext context ) {
+  return Row (
+    children : [
+      Icon ( icon , color : iconColor , ) ,
+      SizedBox ( width : 5
+      SmallText ( text : text , color : color ) ,
+    ]₁
+      return Container();
+
+
+  }
+
+}
+
+
