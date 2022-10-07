@@ -1,0 +1,62 @@
+Line--92
+alignment: Alignment.bottonCenter,
+child: Container(
+  height: 120,
+  margin: EdgeInsets.only(left:30 cight: 30 bottom: 30),
+  decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular (20),
+    color: Colors.white,
+    boxShadow: [
+      BoxShadow(
+        colour: Color(0xFFe8e8e8)
+        blurRadius: 5.0,
+        offset: Offset(0,5)
+      )// BoxShadow
+      BoxShadow(
+        color:Color.white,
+        offset:Offset(-5,0)
+      )// BoxShadow
+      BoxShadow(
+        color:Color.white,
+        ofup        =fset:Offset(5,0)
+      )// BoxShadow
+    ]
+
+line 150
+
+SizedBox(height: 20,),
+Row(
+  mainAxisAlignment: MainAxisAlignment.spaceBetween  //Line Added
+  children: [ 
+    IconAndTextWidget(icon: Icons.circle sharp, 
+      text: "Normal",
+
+Line 138---> SizedBox(height: Dimensions.height10,),
+Line 153---> SizedBox(height: Dimensions.height20,),  // To make it dynamic 
+Line 11--->  this.size=0
+Line 24--->  fontSize: size==0?Dimensions.font20:size,
+
+
+New File (dimensions.dart)
+
+class Dimensions{
+
+  static double screenHeight = Get.context!.height; 
+  static double screenWidth = Get.context!.width;
+
+  static double pageView screenHeight/2.64;
+  static double pageViewContainer screenHeight/3.84;
+  static double pageViewTextContainers screenHeight/7.83;
+
+  static double height10= screenHeight/84.4; 
+  static double height15 screenHeight/56.27;
+  static double height20 = screenHeight/42.2;
+
+  static double font20 = screenHeight/42.2;
+  static double radius20 = screenHeight/42.2;
+  static double radius30 = screenHeight/28.13;
+
+
+
+
+                                                        I
