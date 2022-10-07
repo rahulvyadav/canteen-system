@@ -1,0 +1,80 @@
+//line 74
+Container(
+ margin: constEdgeinsets.only(bottom: 3),
+ child: BigText(text: ".", color:Color.black26),
+)
+//line 77
+Container(
+ margin: constEdgeinsets.only(bottom: 2),
+ child: Smalltext(text: "Food pairing",),
+)  
+//line 71
+crossAxisAlignment: CrossAxisAlignment.end,
+/*line 88
+ListView.builder(
+     physics: NeverScrollableScrollPhysics(),
+     shrinkWrap:true,
+     itemCount: 10,
+     itemBuilder: (context, index){
+     return Container(
+      margin: EdgeInsets.only(Left: Dimensions.width20,right: Dimensions.width20, bottom: Dimensions.height10),
+      child:Row(
+        childern: [
+          
+          Container(
+            width:Dimensions.listViewImgSize,
+            height:Dimensions.listViewImgSize,
+            decoratin: BoxDecoration(
+              borderRadius: BorderRadius.circular(Dimensions.radius20),
+              color:Colors.white38,
+              image: DecorationImage(
+               fit: BoxFit.cover,
+                image: AssetImage(
+                    "assest/image/food0.png"
+          Expanded(
+           child: Container(
+             height: Dimensions.listViewTextContSize,            
+             decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(Dimensions.radius20),
+                    bottomRight: Radius.circular(Dimensions.radius20),
+                ),
+                color: Colors.white, 
+          ),
+          child: Padding(
+            padding: EdgeInsets.only(left: Dimensions.width10, right: Dimensions.width10),  
+            child: Column(
+                crossAxisAlignment: crossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                    BigText(text:"Nutritous fruit meal in cheen"),
+                    SizedBox(height: Dimensions.height10,),
+                    SmallText(text: "with cheene charactersitics"),
+                    SizedBox(height: Dimensions.height10,),                    
+                   
+                    Row(...)  
+                ], 
+          )
+        ),
+            ],
+          )
+       );
+     }),
+)
+
+copy the whole section of Row() in line 234
+*/
+line 88 
+Listview.builder(...),
+
+file: main_food_page_dart
+line 60 instead of foodpagebody(),
+Expanded(child: SingleChildScrollView(
+   child: FoodPageBody(),
+)),
+file: big_text_dart
+line12
+this.overFlow=TextOverflow.ellipsis
+file: dimension_dart
+static double listViewImgSize = screenwidth/3.25;
+static double listViewTextContSize/3.9;
